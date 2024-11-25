@@ -1,0 +1,253 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff6f61, #ff3d00, #4caf50, #3f51b5, #ff9800);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #fff; /* Global text color for better contrast */
+    line-height: 1.6;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6); /* Glass effect background */
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 12px;
+    backdrop-filter: blur(12px); /* Blur effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for header */
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ffeb3b, #ff6f61);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+}
+
+header .tagline {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #ffeb3b; /* Light yellow for a fresh look */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+header nav ul li {
+    margin: 0 25px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffeb3b;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+.highlight {
+    background: rgba(255, 255, 255, 0.2); /* Light glass effect */
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #ffeb3b; /* Matches the gradient animation */
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add subtle shadow for readability */
+}
+
+ul {
+    list-style: none;
+}
+
+.project-card, .education-card {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent card background */
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover, .education-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.2); /* Glass effect for skill cards */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Social Media */
+/* .social-icon {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 50px;
+    margin: 10px;
+    font-size: 1.5em;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background: #ff6f61;
+    transform: scale(1.1);
+} */
+
+/* Center contact information and social media links */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.0em;
+    margin: 5px 0;
+}
+
+#contact a {
+    color: #fafaf8;
+    text-decoration: none;
+    font-weight: 10;
+}
+
+#contact .socials {
+    display: flex;
+    justify-content: center; /* Align the icons horizontally */
+    gap: 20px; /* Space between icons */
+    margin-top: 20px;
+}
+
+#contact .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.8); /* Circle background for the icon */
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: all 0.3s;
+}
+
+#contact .social-icon:hover {
+    background: #ff6f61; /* Highlight color */
+    transform: scale(1.1);
+}
+
+
+footer {
+    background: rgba(0, 0, 0, 0.8); /* Dark footer with transparency */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header .tagline {
+        font-size: 1.2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 90%;
+        text-align: center;
+    }
+}
